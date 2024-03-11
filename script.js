@@ -26,6 +26,7 @@ async function getCountryInfo() {
         for (const border of data.borders) {
             const neighbourResponse = await fetch(`https://restcountries.com/v3.1/alpha/${border}`);
             const [neighbourData] = await neighbourResponse.json();
+            if (neighbourData.name.common === 'Israel') continue;
             
             neighbouringCountries.innerHTML += `
                 <section style="display: flex; justify-content: space-between;">
