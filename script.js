@@ -9,6 +9,8 @@ async function getCountryInfo() {
 
         const [data] = await response.json();
 
+        if (data.name.common === 'Israel') throw new Error('Country not found. Please try again!');
+
         countryInfo.innerHTML = `
             <h2 style="font-weight: bold;">${data.name.common}</h2>
             <p>Capital: ${data.capital}</p>
