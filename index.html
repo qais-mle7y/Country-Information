@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header-container">
+    <h1>Country Information</h1>
+    <form onsubmit="event.preventDefault(); getCountryInfo();">
+        <input type="text" id="countryName" placeholder="Enter country name">
+        <button type="submit">Get Country Info</button>
+    </form>
+</header>
+
+
+<main>
+    <section class="content-container">
+        <section id="countryInfo"></section>
+        <section id="neighbouringCountries"></section>
+    </section>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
